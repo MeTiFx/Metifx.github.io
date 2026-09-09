@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -29,7 +29,7 @@
       "jobTitle": "تحلیل‌گر ارشد بازار طلا و بنیان‌گذار استراتژی MRN",
       "birthPlace": "خوی، ایران",
       "url": "https://metifx.com",
-      "sameAs": []
+      "sameAs": ["https://t.me/MeTiTr", "https://www.instagram.com/mahdi_erfaniannn"]
     }
     </script>
 
@@ -1467,9 +1467,9 @@
             <h2>همکاری <span>حرفه‌ای</span> با مهدی</h2>
             <p>برای مشاوره، منتورینگ، یا همکاری در پروژه‌های تحلیل و پراپ، با ما در ارتباط باشید.</p>
             <div class="btn-group">
-                <a href="#" class="btn-gold"><i class="fab fa-telegram"></i> تلگرام</a>
-                <a href="#" class="btn-gold" style="background:linear-gradient(135deg,#1da1f2,#0d8bd9); box-shadow:0 8px 40px rgba(29,161,242,0.2);"><i class="fab fa-twitter"></i> توییتر</a>
-                <a href="#" class="btn-outline"><i class="fas fa-envelope"></i> ایمیل</a>
+                <a href="https://t.me/MeTiTr" target="_blank" rel="noopener" class="btn-gold"><i class="fab fa-telegram"></i> تلگرام</a>
+                <a href="https://www.instagram.com/mahdi_erfaniannn" target="_blank" rel="noopener" class="btn-gold" style="background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af); box-shadow:0 8px 40px rgba(221,42,123,0.2);"><i class="fab fa-instagram"></i> اینستاگرام</a>
+                <a href="mailto:erfanianmahdi750@gmail.com" class="btn-outline"><i class="fas fa-envelope"></i> ایمیل</a>
             </div>
         </div>
     </section>
@@ -1487,10 +1487,9 @@
                 </div>
             </div>
             <div class="footer-socials">
-                <a href="#"><i class="fab fa-telegram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="https://t.me/MeTiTr" target="_blank" rel="noopener"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.instagram.com/mahdi_erfaniannn" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:erfanianmahdi750@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
             <span class="footer-copy">© ۱۴۰۴ تمامی حقوق محفوظ است.</span>
         </div>
