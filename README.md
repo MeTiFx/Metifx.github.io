@@ -45,6 +45,16 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            min-width: 0;
+        }
+
+        img, svg, canvas, video, iframe {
+            max-width: 100%;
+        }
+
+        p, h1, h2, h3, h4, h5, h6, span, a, li {
+            overflow-wrap: break-word;
+            word-break: break-word;
         }
 
         :root {
@@ -78,7 +88,6 @@
             line-height: 1.7;
             overflow-x: hidden;
             max-width: 100%;
-            position: relative;
         }
 
         a {
