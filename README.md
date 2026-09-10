@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -73,6 +73,8 @@
             --radius: 20px;
             --transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1);
             --shadow-gold: 0 8px 40px rgba(212, 175, 55, 0.15);
+            --container-max: 1200px;
+            --container-pad: 28px;
         }
 
         html {
@@ -101,10 +103,22 @@
             max-width: 100%;
         }
 
+        /* ============================================================
+                   CONTAINER  —  سقف ۱۰۰٪ + حداقل بر اساس مقیاس
+                ============================================================ */
         .container {
-            max-width: 1200px;
+            width: 100%;
+            max-width: var(--container-max);
             margin: 0 auto;
-            padding: 0 28px;
+            padding: 0 var(--container-pad);
+        }
+
+        /* همه بخش‌های اصلی هرگز از ۱۰۰٪ والد خود بیرون نزنند */
+        section,
+        header,
+        footer {
+            width: 100%;
+            max-width: 100%;
         }
 
         ::-webkit-scrollbar {
@@ -137,6 +151,7 @@
             box-shadow: var(--shadow-gold);
             position: relative;
             overflow: hidden;
+            max-width: 100%;
         }
         .btn-gold::after {
             content: '';
@@ -167,6 +182,7 @@
             align-items: center;
             gap: 10px;
             backdrop-filter: blur(4px);
+            max-width: 100%;
         }
         .btn-outline:hover {
             background: rgba(212, 175, 55, 0.08);
@@ -204,6 +220,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
+            max-width: 100%;
         }
 
         .logo {
@@ -213,6 +231,7 @@
             font-size: 1.5rem;
             font-weight: 800;
             letter-spacing: -0.5px;
+            max-width: 100%;
         }
         .logo .gold {
             color: var(--gold);
@@ -228,6 +247,7 @@
         .logo .logo-icon {
             width: 36px;
             height: 36px;
+            flex-shrink: 0;
             background: linear-gradient(135deg, var(--gold), var(--gold-dark));
             border-radius: 10px;
             display: flex;
@@ -242,6 +262,7 @@
             display: flex;
             align-items: center;
             gap: 36px;
+            max-width: 100%;
         }
         .nav-links a {
             font-size: 0.85rem;
@@ -278,6 +299,7 @@
             font-weight: 700 !important;
             font-size: 0.8rem !important;
             transition: var(--transition);
+            max-width: 100%;
         }
         .nav-cta::before {
             display: none !important;
@@ -294,6 +316,7 @@
             gap: 5px;
             cursor: pointer;
             padding: 4px;
+            flex-shrink: 0;
         }
         .hamburger span {
             width: 26px;
@@ -313,6 +336,8 @@
             padding: 50px 0 60px;
             position: relative;
             overflow: hidden;
+            width: 100%;
+            max-width: 100%;
         }
 
         /* پارتیکل‌های پس‌زمینه */
@@ -322,6 +347,7 @@
             left: 0;
             width: 100%;
             height: 100%;
+            max-width: 100%;
             z-index: 0;
             pointer-events: none;
         }
@@ -333,6 +359,8 @@
             align-items: center;
             position: relative;
             z-index: 2;
+            width: 100%;
+            max-width: 100%;
         }
 
         .hero-badge {
@@ -349,6 +377,7 @@
             letter-spacing: 0.5px;
             margin-bottom: 28px;
             backdrop-filter: blur(4px);
+            max-width: 100%;
         }
         .hero-badge i {
             font-size: 0.8rem;
@@ -359,6 +388,7 @@
             font-weight: 800;
             line-height: 1.08;
             margin-bottom: 8px;
+            max-width: 100%;
         }
         .hero h1 .highlight {
             color: var(--gold);
@@ -393,6 +423,8 @@
             color: var(--text-secondary);
             margin-bottom: 28px;
             min-height: 40px;
+            max-width: 100%;
+            flex-wrap: wrap;
         }
         .typewriter-wrap .static {
             color: var(--text-secondary);
@@ -402,6 +434,8 @@
             border-left: 3px solid var(--gold);
             padding-left: 6px;
             animation: blink 0.8s step-end infinite;
+            max-width: 100%;
+            overflow-wrap: anywhere;
         }
         @keyframes blink {
             0%,
@@ -417,6 +451,7 @@
             display: flex;
             gap: 14px;
             flex-wrap: wrap;
+            max-width: 100%;
         }
 
         .hero-stats {
@@ -425,6 +460,8 @@
             margin-top: 44px;
             padding-top: 32px;
             border-top: 1px solid rgba(255, 255, 255, 0.04);
+            max-width: 100%;
+            flex-wrap: wrap;
         }
         .hero-stats .stat h3 {
             font-size: 1.8rem;
@@ -445,11 +482,16 @@
             justify-content: center;
             align-items: center;
             position: relative;
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
         }
 
         .hero-ring {
             width: 380px;
-            height: 380px;
+            max-width: 100%;
+            aspect-ratio: 1 / 1;
+            height: auto;
             border-radius: 50%;
             background: conic-gradient(from 0deg, var(--gold), transparent 40%, var(--gold) 60%, transparent 80%, var(--gold));
             padding: 3px;
@@ -464,6 +506,7 @@
         .hero-ring .inner {
             width: 100%;
             height: 100%;
+            max-width: 100%;
             border-radius: 50%;
             background: var(--dark-bg);
             display: flex;
@@ -494,6 +537,7 @@
             box-shadow: 0 12px 50px rgba(0, 0, 0, 0.4);
             animation: floatPill 5s ease-in-out infinite;
             color: var(--text-primary);
+            max-width: 100%;
         }
         .floating-pill i {
             color: var(--gold);
@@ -531,6 +575,8 @@
         section {
             padding: 100px 0;
             position: relative;
+            width: 100%;
+            max-width: 100%;
         }
 
         .section-label {
@@ -547,6 +593,7 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             margin-bottom: 12px;
+            max-width: 100%;
         }
 
         .section-title {
@@ -554,6 +601,7 @@
             font-weight: 700;
             line-height: 1.15;
             margin-bottom: 10px;
+            max-width: 100%;
         }
         .section-title .gold {
             color: var(--gold);
@@ -572,6 +620,8 @@
             background: var(--dark-card);
             border-top: 1px solid var(--dark-border);
             border-bottom: 1px solid var(--dark-border);
+            width: 100%;
+            max-width: 100%;
         }
 
         .about-grid {
@@ -579,6 +629,14 @@
             grid-template-columns: 1fr 1fr;
             gap: 60px;
             align-items: center;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .about-text,
+        .about-visual {
+            max-width: 100%;
+            min-width: 0;
         }
 
         .about-tags {
@@ -586,6 +644,7 @@
             flex-wrap: wrap;
             gap: 10px;
             margin: 18px 0 24px;
+            max-width: 100%;
         }
         .about-tags span {
             background: rgba(212, 175, 55, 0.06);
@@ -595,6 +654,7 @@
             font-size: 0.75rem;
             color: var(--gold);
             font-weight: 500;
+            max-width: 100%;
         }
         .about-tags span i {
             margin-left: 6px;
@@ -606,6 +666,8 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 16px;
             margin-top: 28px;
+            width: 100%;
+            max-width: 100%;
         }
         .metric-card {
             background: var(--dark-bg);
@@ -614,6 +676,8 @@
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.02);
             transition: var(--transition);
+            max-width: 100%;
+            min-width: 0;
         }
         .metric-card:hover {
             border-color: rgba(212, 175, 55, 0.1);
@@ -645,6 +709,9 @@
             color: var(--gold-light);
             border-right: 3px solid var(--gold);
             line-height: 1.8;
+            max-width: 100%;
+            overflow-x: auto;
+            overflow-wrap: anywhere;
         }
         .about-visual .code-block .c {
             color: var(--text-secondary);
@@ -661,6 +728,7 @@
             flex-wrap: wrap;
             gap: 12px;
             margin-top: 18px;
+            max-width: 100%;
         }
         .about-partners span {
             background: var(--dark-bg);
@@ -669,6 +737,7 @@
             font-size: 0.7rem;
             color: var(--text-secondary);
             border: 1px solid rgba(255, 255, 255, 0.03);
+            max-width: 100%;
         }
         .about-partners span i {
             color: var(--gold);
@@ -682,6 +751,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 28px;
+            width: 100%;
+            max-width: 100%;
         }
 
         .strategy-card {
@@ -695,6 +766,8 @@
             cursor: default;
             transform-style: preserve-3d;
             perspective: 800px;
+            max-width: 100%;
+            min-width: 0;
         }
         .strategy-card::before {
             content: '';
@@ -739,6 +812,7 @@
             padding: 2px 14px;
             border-radius: 60px;
             letter-spacing: 0.5px;
+            max-width: 100%;
         }
 
         /* ============================================================
@@ -748,10 +822,13 @@
             background: var(--dark-card);
             border-top: 1px solid var(--dark-border);
             border-bottom: 1px solid var(--dark-border);
+            width: 100%;
+            max-width: 100%;
         }
 
         .timeline {
             position: relative;
+            width: 100%;
             max-width: 800px;
             margin: 0 auto;
             padding-right: 40px;
@@ -774,6 +851,9 @@
             margin-bottom: 20px;
             border: 1px solid rgba(255, 255, 255, 0.02);
             transition: var(--transition);
+            max-width: 100%;
+            min-width: 0;
+            overflow-wrap: anywhere;
         }
         .timeline-item:hover {
             border-color: rgba(212, 175, 55, 0.08);
@@ -800,6 +880,7 @@
             padding: 1px 14px;
             border-radius: 60px;
             margin-bottom: 6px;
+            max-width: 100%;
         }
         .timeline-item h4 {
             font-size: 1.05rem;
@@ -817,6 +898,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 28px;
+            width: 100%;
+            max-width: 100%;
         }
         .testimonial-card {
             background: var(--dark-card);
@@ -824,6 +907,8 @@
             border-radius: var(--radius);
             border: 1px solid rgba(255, 255, 255, 0.02);
             transition: var(--transition);
+            max-width: 100%;
+            min-width: 0;
         }
         .testimonial-card:hover {
             border-color: rgba(212, 175, 55, 0.06);
@@ -860,10 +945,13 @@
             border-top: 1px solid var(--dark-border);
             border-bottom: 1px solid var(--dark-border);
             text-align: center;
+            width: 100%;
+            max-width: 100%;
         }
         .cta h2 {
             font-size: 2.8rem;
             font-weight: 700;
+            max-width: 100%;
         }
         .cta h2 span {
             color: var(--gold);
@@ -878,6 +966,7 @@
             gap: 14px;
             justify-content: center;
             flex-wrap: wrap;
+            max-width: 100%;
         }
 
         /* ============================================================
@@ -886,6 +975,8 @@
         footer {
             padding: 32px 0;
             border-top: 1px solid var(--dark-border);
+            width: 100%;
+            max-width: 100%;
         }
         .footer-grid {
             display: flex;
@@ -893,15 +984,19 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 20px;
+            width: 100%;
+            max-width: 100%;
         }
         .footer-grid .brand {
             display: flex;
             align-items: center;
             gap: 10px;
+            max-width: 100%;
         }
         .footer-grid .brand .logo-icon {
             width: 32px;
             height: 32px;
+            flex-shrink: 0;
             background: linear-gradient(135deg, var(--gold), var(--gold-dark));
             border-radius: 8px;
             display: flex;
@@ -923,6 +1018,7 @@
         .footer-socials {
             display: flex;
             gap: 16px;
+            max-width: 100%;
         }
         .footer-socials a {
             color: var(--text-secondary);
@@ -939,6 +1035,23 @@
         }
 
         /* ============================================================
+                   WIDGETS (TradingView)
+                ============================================================ */
+        .tradingview-widget-container,
+        .tradingview-widget-container__widget,
+        #chartWidget,
+        #tickerWidget {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        #chartWidget iframe,
+        #tickerWidget iframe {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+
+        /* ============================================================
                    RESPONSIVE
                 ============================================================ */
         @media (max-width: 1024px) {
@@ -947,7 +1060,6 @@
             }
             .hero-ring {
                 width: 300px;
-                height: 300px;
             }
             .fp-1,
             .fp-2,
@@ -981,7 +1093,6 @@
             }
             .hero-ring {
                 width: 220px;
-                height: 220px;
             }
             .hero-ring .inner {
                 font-size: 4rem;
@@ -1001,6 +1112,7 @@
                 top: 64px;
                 left: 0;
                 width: 100%;
+                max-width: 100%;
                 padding: 28px 24px;
                 gap: 18px;
                 border-bottom: 1px solid rgba(212, 175, 55, 0.06);
@@ -1065,7 +1177,6 @@
             }
             .hero-ring {
                 width: 170px;
-                height: 170px;
             }
             .hero-ring .inner {
                 font-size: 3rem;
@@ -1078,7 +1189,7 @@
         }
 
         /* ============================================================
-                   MOBILE OVERFLOW FIX — فقط جلوگیری از خروج اجزا از کادر
+                   MOBILE OVERFLOW FIX — تضمین سقف ۱۰۰٪
                 ============================================================ */
         @media (max-width: 768px) {
             .container {
@@ -1092,7 +1203,8 @@
             .about-grid,
             .strategy-grid,
             .testimonial-grid,
-            .footer-grid {
+            .footer-grid,
+            .about-metrics {
                 width: 100%;
                 max-width: 100%;
             }
@@ -1104,7 +1216,8 @@
             .timeline,
             .timeline-item,
             .strategy-card,
-            .testimonial-card {
+            .testimonial-card,
+            .metric-card {
                 max-width: 100%;
                 min-width: 0;
             }
@@ -1131,17 +1244,6 @@
 
             .timeline-item {
                 overflow-wrap: anywhere;
-            }
-
-            .tradingview-widget-container,
-            .tradingview-widget-container__widget,
-            #chartWidget {
-                max-width: 100%;
-                width: 100%;
-            }
-
-            #chartWidget iframe {
-                max-width: 100% !important;
             }
         }
 
@@ -1231,7 +1333,7 @@
     <!-- ============================================================
     LIVE TICKER
     ============================================================ -->
-    <div style="padding-top:64px;">
+    <div style="padding-top:64px; width:100%; max-width:100%;">
         <div class="tradingview-widget-container" id="tickerWidget">
             <div class="tradingview-widget-container__widget"></div>
             <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
@@ -1253,7 +1355,7 @@
             }
             </script>
         </div>
-        <div id="tickerFallback" style="display:none; text-align:center; padding:10px; font-size:0.75rem; color:var(--text-muted); background:var(--dark-card); border-bottom:1px solid var(--dark-border);">
+        <div id="tickerFallback" style="display:none; text-align:center; padding:10px; font-size:0.75rem; color:var(--text-muted); background:var(--dark-card); border-bottom:1px solid var(--dark-border); width:100%; max-width:100%;">
             داده لحظه‌ای بازار بارگذاری نشد — ممکن است دسترسی به سرور قیمت‌ها نیاز به VPN داشته باشد.
         </div>
     </div>
@@ -1399,13 +1501,13 @@
                 حرکت لحظه‌ای طلا؛ همان چارتی که تحلیل‌های MRN روی آن انجام می‌شود.
             </p>
 
-            <div style="background:var(--dark-card); border:1px solid var(--dark-border); border-radius:var(--radius); box-shadow:var(--shadow-gold); overflow:hidden; height:520px; position:relative;">
-                <div id="chartFallback" style="display:none; position:absolute; inset:0; align-items:center; justify-content:center; flex-direction:column; gap:10px; text-align:center; padding:20px; color:var(--text-muted); font-size:0.85rem;">
+            <div style="background:var(--dark-card); border:1px solid var(--dark-border); border-radius:var(--radius); box-shadow:var(--shadow-gold); overflow:hidden; height:520px; max-height:100%; width:100%; max-width:100%; position:relative;">
+                <div id="chartFallback" style="display:none; position:absolute; inset:0; align-items:center; justify-content:center; flex-direction:column; gap:10px; text-align:center; padding:20px; color:var(--text-muted); font-size:0.85rem; max-width:100%;">
                     <i class="fas fa-chart-line" style="font-size:1.6rem; color:var(--gold);"></i>
                     چارت زنده بارگذاری نشد — احتمالاً به دلیل محدودیت دسترسی به سرور TradingView است؛ با VPN دوباره امتحان کنید.
                 </div>
-                <div class="tradingview-widget-container" id="chartWidget" style="height:100%;">
-                    <div class="tradingview-widget-container__widget" style="height:100%;"></div>
+                <div class="tradingview-widget-container" id="chartWidget" style="height:100%; max-width:100%; width:100%;">
+                    <div class="tradingview-widget-container__widget" style="height:100%; max-width:100%;"></div>
                     <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
                     {
                       "autosize": true,
@@ -1599,7 +1701,7 @@
             <span class="footer-copy">© ۱۴۰۴ تمامی حقوق محفوظ است.</span>
         </div>
         <div class="container">
-            <p style="margin-top:20px; padding-top:20px; border-top:1px solid var(--dark-border); color:var(--text-muted); font-size:0.72rem; line-height:1.9; max-width:900px;">
+            <p style="margin-top:20px; padding-top:20px; border-top:1px solid var(--dark-border); color:var(--text-muted); font-size:0.72rem; line-height:1.9; max-width:100%;">
                 معاملات در بازارهای مالی با ریسک همراه است و عملکرد گذشته تضمینی برای نتایج آینده نیست. اطلاعات این وب‌سایت صرفاً جنبه آموزشی و تحلیلی دارد و توصیه سرمایه‌گذاری محسوب نمی‌شود.
             </p>
         </div>
@@ -1815,8 +1917,6 @@
 
         // ============================================================
         // 9. TRADINGVIEW WIDGET FALLBACK
-        // اگر ویجت‌های TradingView (مثلاً به‌دلیل محدودیت دسترسی) لود نشوند،
-        // بعد از چند ثانیه پیام جایگزین نشان داده می‌شود.
         // ============================================================
         function checkWidgetLoaded(containerId, fallbackId, displayMode) {
             setTimeout(() => {
