@@ -1078,6 +1078,96 @@
         }
 
         /* ============================================================
+                   MOBILE OVERFLOW FIX — فقط جلوگیری از خروج اجزا از کادر
+                ============================================================ */
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                max-width: 100%;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .hero-grid,
+            .about-grid,
+            .strategy-grid,
+            .testimonial-grid,
+            .footer-grid {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .hero-text,
+            .hero-visual,
+            .about-text,
+            .about-visual,
+            .timeline,
+            .timeline-item,
+            .strategy-card,
+            .testimonial-card {
+                max-width: 100%;
+                min-width: 0;
+            }
+
+            .typewriter-wrap {
+                max-width: 100%;
+                flex-wrap: wrap;
+            }
+
+            .hero-actions,
+            .cta .btn-group {
+                max-width: 100%;
+            }
+
+            .hero-actions > *,
+            .cta .btn-group > * {
+                max-width: 100%;
+            }
+
+            .about-visual .code-block {
+                max-width: 100%;
+                overflow-x: auto;
+            }
+
+            .timeline-item {
+                overflow-wrap: anywhere;
+            }
+
+            .tradingview-widget-container,
+            .tradingview-widget-container__widget,
+            #chartWidget {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            #chartWidget iframe {
+                max-width: 100% !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            .hero-actions,
+            .cta .btn-group {
+                width: 100%;
+            }
+
+            .hero-actions > *,
+            .cta .btn-group > * {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .typewriter-wrap {
+                justify-content: center;
+            }
+        }
+
+        /* ============================================================
                    REVEAL ANIMATIONS
                 ============================================================ */
         .reveal {
