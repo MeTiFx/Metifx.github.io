@@ -1702,9 +1702,11 @@
         </div>
         <div class="container">
             <p style="margin-top:20px; padding-top:20px; border-top:1px solid var(--dark-border); color:var(--text-muted); font-size:0.72rem; line-height:1.9; max-width:100%;">
-                با ما در کنار هم ریسک معاملات خود را کمتر کنید.
-                EY
+            <p>
+            با ما در کنار هم ریسک معاملاتی خود را کمتر کنید و رشد خود را با همکاری با ما فراهم و راحت تر نمایید 
+            دوستان ما مشتاقانه منتظر تماس های شما هستن.
             </p>
+                
         </div>
     </footer>
 
