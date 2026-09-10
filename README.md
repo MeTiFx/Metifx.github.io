@@ -1702,7 +1702,8 @@
         </div>
         <div class="container">
             <p style="margin-top:20px; padding-top:20px; border-top:1px solid var(--dark-border); color:var(--text-muted); font-size:0.72rem; line-height:1.9; max-width:100%;">
-                معاملات در بازارهای مالی با ریسک همراه است و عملکرد گذشته تضمینی برای نتایج آینده نیست. اطلاعات این وب‌سایت صرفاً جنبه آموزشی و تحلیلی دارد و توصیه سرمایه‌گذاری محسوب نمی‌شود.
+                با ما در کنار هم ریسک معاملات خود را کمتر کنید.
+                EY
             </p>
         </div>
     </footer>
