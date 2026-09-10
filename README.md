@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -67,6 +67,8 @@
 
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
+            max-width: 100%;
         }
 
         body {
@@ -75,6 +77,8 @@
             color: var(--text-primary);
             line-height: 1.7;
             overflow-x: hidden;
+            max-width: 100%;
+            position: relative;
         }
 
         a {
@@ -170,6 +174,8 @@
             top: 0;
             left: 0;
             width: 100%;
+            max-width: 100vw;
+            overflow-x: hidden;
             z-index: 1000;
             padding: 12px 0;
             background: rgba(7, 10, 15, 0.55);
